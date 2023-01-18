@@ -1,0 +1,35 @@
+[req]
+
+default_bits = 2048
+
+prompt = no
+
+default_md = sha256
+
+x509_extensions = v3_req
+
+distinguished_name = dn
+
+[dn]
+
+C = BR
+
+ST = Maranhao
+
+L = Sao Luis
+
+O = DevOps
+
+emailAddress = devops@gmai.com
+
+CN = registry.lab.io
+
+[v3_req]
+
+#subjectAltName = @alt_names
+
+#[alt_names]
+
+#DNS.1 = sss-laptop136.aaspl-brd.com (Nome de Url FQDN CR)
+
+#DNS.2 = sss-laptop151.aaspl-brd.com (Nome de FQDN URL IQBOT)

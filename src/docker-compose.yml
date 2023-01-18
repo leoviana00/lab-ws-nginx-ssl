@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+    app:
+      build: .
+      container_name: app
+      restart: always
+      volumes:
+        - ../certs:/etc/nginx/certs
+      ports:
+      - 8081:80
+      - 443:443
