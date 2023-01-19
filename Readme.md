@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img alt="Prometheues" src="images/nginx-ssl.png">
+  <img alt="nginx" src="images/nginx-ssl.png">
 </p>
 
 ## 🌱 Project
@@ -24,21 +24,49 @@
 
 ## 🛠️ Etapas serem feitas
 
-- Criar Script para gerar os certificados
-- Configurar um dns no /et/hosts da máquina
-- Criar e configura uma aplicação rodando no Nginx
-- Criar nginx.conf
-- Dockerizar a aplicação
-- Criar docker-compose para subir o nginx
+- [x] Criar Script para gerar os certificados [generate_certificates.sh](generate_certificates.sh)
+- [x] Configurar um dns ficticio no /etc/hosts da máquina
+  - Utilizei como exemplo o `127.0.0.1 lab.nginx.viana.io`
+- [x] Criar e configura uma aplicação rodando no Nginx [App para exemplo](./src/README.md)
+- [x] Criar nginx.conf [Example](./src/nginx.conf)
+- [x] Dockerizar a aplicação [Dockerfile](./src/Dockerfile)
+- [x] Criar docker-compose para subir o nginx [docker-compose.yml](./docker-compose.yml)
 
 ## ✨ Execução
 
-- SUbindo os serviços
+- Criar certificados
+
+```bash
+bash generate_certificates.sh
+```
+
+- Subir o webserver com docker-compose
 
 ```bash
 docker-compose up -d --build
 ```
 
+- Acessando o serviço:
+
+- Acessando a página inicial do serviço:
+  - https://lab.nginx.viana.io
+
+<p align="center">
+  <img alt="nginx" src="images/pag-1.png">
+</p>
+
+- Verificando o estado do serviço:
+  - https://lab.nginx.viana.io/status
+
+<p align="center">
+  <img alt="nginx" src="images/status.png">
+</p>
+
 ## 📄 Licença
 
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
 ## 🙇 Referências
+
+- https://imasters.com.br/devsecops/como-criar-um-certificado-autoassinado-ssl-com-openssl
+- https://thatdevopsguy.medium.com/how-to-create-a-static-web-server-for-html-with-nginx-99bf8226bce6
