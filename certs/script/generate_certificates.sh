@@ -17,10 +17,10 @@ sleep 5
 echo -e "${IYELLOW}Script para gerar certificado auto assinado${NC}"
 sleep 3
 
-echo -e "${IYELLOW}Criando Certificado para o Registry...${NC}"
+echo -e "${GREEN}Criando Certificado para o Registry...${NC}"
 sleep 3
 
-echo -e "${GREEN}[TASK 01] - Removendo chave e certificado vencidos...${NC}"SISTEMA
+echo -e "${GREEN}[TASK 01] - Removendo chave e certificado vencidos...${NC}"
 rm -f ./certs/registry.lab.io.key
 rm -f ./certs/registry.lab.io.crt
 sleep 3
