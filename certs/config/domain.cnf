@@ -20,9 +20,9 @@ L = Sao Luis
 
 O = DevOps
 
-emailAddress = devops@gmai.com
+emailAddress = devops@gmail.com
 
-CN = registry.lab.io
+CN = lab.nginx.viana.io
 
 [v3_req]
 
